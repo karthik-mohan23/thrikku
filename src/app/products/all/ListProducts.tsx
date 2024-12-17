@@ -12,7 +12,7 @@ function ListProducts() {
           <Link
             href={`${product.id}`}
             key={product.id}
-            className="border border-orange-500 rounded-lg w-80 h-[440px] group">
+            className="border border-orange-500 rounded-lg w-80 h-[440px] group shadow-lg hover:shadow-2xl duration-300">
             <div className="flex flex-col gap-2 p-4 w-full">
               <div className="w-full h-80">
                 <img

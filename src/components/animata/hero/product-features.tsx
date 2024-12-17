@@ -92,7 +92,7 @@ export default function ProductFeatures() {
   const yOffset = 30;
 
   return (
-    <section className="storybook-fix flex w-full flex-col items-center gap-4 bg-orange-50 py-10">
+    <section className="storybook-fix flex w-full flex-col items-center gap-4 bg-orange-50 pt-16 md:py-10">
       <motion.header
         initial={{
           y: 100,
@@ -105,7 +105,7 @@ export default function ProductFeatures() {
             duration: 0.5,
           },
         }}
-        className="flex max-w-2xl flex-col items-center gap-4 text-center">
+        className="flex max-w-2xl flex-col items-center gap-10 md:gap-4 text-center">
         <h1 className="text-3xl md:text-5xl px-2 md:px-0 font-black text-orange-600">
           Wear Your Story. Shop Your Style!
         </h1>
