@@ -26,16 +26,19 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
           <Expandable list={currentProduct?.images} />
         </div>
         {/* cont */}
-        <div className="flex flex-col gap-3 ">
+        <div className="flex flex-col gap-3 w-full">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
             {currentProduct.name}
           </h1>
           <p className="text-xl md:text-2xl">₹ {currentProduct.price}</p>
-          <Link href="https://wa.me/919495850577" target="_blank" className="">
+          <Link
+            href="https://wa.me/919495850577"
+            target="_blank"
+            className="w-[55%]">
             <SwipeButton
               firstText="Order via WhatsApp"
               secondText="Order via WhatsApp"
-              className="max-w-36"
+              className="w-full"
             />
           </Link>
         </div>
