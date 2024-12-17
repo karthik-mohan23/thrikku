@@ -12,7 +12,13 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
   );
 
   if (!currentProduct) {
-    return <h1>No product found</h1>;
+    return (
+      <section className="max-w-5xl mx-auto w-[90%] flex items-center justify-center min-h-[80vh]">
+        <h1 className="text-3xl md:text-5xl font-semibold">
+          Product not found.
+        </h1>
+      </section>
+    );
   }
 
   return (
@@ -34,7 +40,7 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
           <Link
             href="https://wa.me/919495850577"
             target="_blank"
-            className="w-[55%]">
+            className="max-w-72">
             <SwipeButton
               firstText="Order via WhatsApp"
               secondText="Order via WhatsApp"
