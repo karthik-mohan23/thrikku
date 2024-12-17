@@ -2,7 +2,6 @@ import SwipeButton from "@/components/animata/button/swipe-button";
 import Expandable from "@/components/animata/carousel/expandable";
 import BackButton from "@/components/BackButton";
 import { allProducts } from "@/libs/utils";
-import { h1 } from "framer-motion/client";
 import Link from "next/link";
 
 async function page({ params }: { params: Promise<{ id: string }> }) {
