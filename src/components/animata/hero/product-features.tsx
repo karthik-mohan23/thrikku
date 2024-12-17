@@ -70,14 +70,16 @@ function FeatureCard({
           zIndex,
           scale,
         }}
-        className={cn(containerClassName, "hidden sm:flex")}
+        // className={cn(containerClassName, "hidden sm:flex")}
+        className={cn(containerClassName)}
         {...props}>
         {content}
       </motion.div>
       <motion.div
         initial={{ y: 100 }}
         whileInView={{ y: 0, transition: { duration: 0.5 } }}
-        className={cn(containerClassName, "flex sm:hidden")}>
+        // className={cn(containerClassName, "flex sm:hidden")}>
+        className={cn(containerClassName, "hidden ")}>
         {content}
       </motion.div>
     </>
@@ -104,7 +106,7 @@ export default function ProductFeatures() {
           },
         }}
         className="flex max-w-2xl flex-col items-center gap-4 text-center">
-        <h1 className="text-3xl md:text-5xl  font-black text-orange-600">
+        <h1 className="text-3xl md:text-5xl px-2 md:px-0 font-black text-orange-600">
           Wear Your Story. Shop Your Style!
         </h1>
         <Balancer className="block text-lg text-neutral-500 max-w-md">
@@ -133,7 +135,7 @@ export default function ProductFeatures() {
         </Link>
       </motion.div>
 
-      <div className="relative flex w-full flex-wrap justify-center gap-8 px-4 py-12 sm:flex-row sm:gap-0">
+      <div className="relative flex w-full  justify-center  px-4 py-12  sm:gap-0">
         <FeatureCard
           feature={{
             // category: "tshirts",
