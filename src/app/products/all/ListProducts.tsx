@@ -9,7 +9,7 @@ function ListProducts() {
       </h1>
       <div className="w-[90%] lg:w-full mx-auto flex flex-col md:flex-row flex-wrap lg:justify-center items-center gap-8 ">
         {allProducts.map((product) => (
-          <Link href={`products/${product.id}`}>
+          <Link href={`products/${product.id}`} key={product.id}>
             <div className="max-w-80 h-96 flex flex-col gap-2">
               <div className="w-full h-80">
                 <img
