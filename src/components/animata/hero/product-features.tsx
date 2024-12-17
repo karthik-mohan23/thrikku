@@ -92,7 +92,7 @@ export default function ProductFeatures() {
   const yOffset = 30;
 
   return (
-    <section className="storybook-fix flex w-full flex-col items-center gap-4 bg-orange-50 pt-16  md:pt-10 md:pb-10">
+    <section className="storybook-fix flex w-full flex-col items-center gap-4 bg-orange-50 pt-12  md:pt-10 md:pb-10">
       <motion.header
         initial={{
           y: 100,
@@ -109,7 +109,7 @@ export default function ProductFeatures() {
         <h1 className="text-4xl md:text-6xl px-2 md:px-0 font-black text-orange-600">
           Wear Your Story. Shop Your Style!
         </h1>
-        <Balancer className="block text-lg text-neutral-500 max-w-md">
+        <Balancer className="block text-lg text-neutral-500 max-w-md px-2">
           Bold Prints for Every Mood.From graphic classics to trendy essentials,
           we&apos;ve got your style sorted.
         </Balancer>
