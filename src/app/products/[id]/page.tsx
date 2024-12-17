@@ -20,19 +20,21 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
       <div className="pt-5 pb-10">
         <BackButton to="/products/all" />
       </div>
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
         {/* image */}
         <div className="max-w-lg w-full">
           <Expandable list={currentProduct?.images} />
         </div>
         {/* cont */}
-        <div className="flex flex-col gap-3 max-w-md">
-          <h1 className="text-2xl font-semibold">{currentProduct.name}</h1>
-          <p className="text-xl">₹ {currentProduct.price}</p>
-          <Link href={"#"} className="">
+        <div className="flex flex-col gap-3 ">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            {currentProduct.name}
+          </h1>
+          <p className="text-xl md:text-2xl">₹ {currentProduct.price}</p>
+          <Link href="https://wa.me/919495850577" target="_blank" className="">
             <SwipeButton
-              firstText="Dm on whatsapp"
-              secondText="Dm on whatsapp"
+              firstText="Order via WhatsApp"
+              secondText="Order via WhatsApp"
               className="max-w-36"
             />
           </Link>
