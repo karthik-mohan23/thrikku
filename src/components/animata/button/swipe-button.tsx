@@ -16,7 +16,7 @@ export default function SwipeButton({
   className = "",
   secondText = "Get access",
   firstText = "Get access",
-  firstClass = "bg-orange-500 text-white",
+  firstClass = "bg-red-500 text-white",
   secondClass = "bg-black text-white",
   ...props
 }: SwipeButtonProps) {

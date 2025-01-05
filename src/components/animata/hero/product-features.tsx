@@ -92,7 +92,7 @@ export default function ProductFeatures() {
   const yOffset = 30;
 
   return (
-    <section className="storybook-fix flex w-full flex-col items-center gap-4 bg-orange-50 pt-12  md:pt-10 md:pb-10">
+    <section className="storybook-fix flex w-full flex-col items-center gap-4 bg-white pt-12 md:pt-3">
       <motion.header
         initial={{
           y: 100,
@@ -106,7 +106,7 @@ export default function ProductFeatures() {
           },
         }}
         className="flex max-w-2xl flex-col items-center gap-4 md:gap-4 text-center">
-        <h1 className="text-4xl md:text-6xl px-2 md:px-0 font-black text-orange-600">
+        <h1 className="text-4xl md:text-6xl px-2 md:px-0 font-black text-black">
           Wear Your Story. Shop Your Style!
         </h1>
         <Balancer className="block text-lg text-neutral-500 max-w-md px-2">
@@ -129,9 +129,9 @@ export default function ProductFeatures() {
         }}>
         <Link
           href="/products/all"
-          className="box-border inline-block h-11 transform-gpu cursor-pointer touch-manipulation whitespace-nowrap rounded-full border-b-4 border-solid border-transparent bg-orange-600 px-4 py-3 text-center text-sm font-bold uppercase leading-5 tracking-wider text-white shadow-2xl outline-none transition-all duration-200 hover:brightness-110 active:border-b-0 active:border-t-4 active:bg-none disabled:cursor-auto">
+          className="box-border inline-block h-11 transform-gpu cursor-pointer touch-manipulation whitespace-nowrap rounded-full border-b-4 border-solid border-transparent bg-red-600 px-4 py-3 text-center text-sm font-bold uppercase leading-5 tracking-wider text-white shadow-2xl outline-none transition-all duration-200 hover:brightness-110 active:border-b-0 active:border-t-4 active:bg-none disabled:cursor-auto">
           Start shopping &rarr;
-          <span className="absolute inset-0 -z-10 rounded-full border-b-4 border-solid border-transparent bg-orange-500" />
+          <span className="absolute inset-0 -z-10 rounded-full border-b-4 border-solid border-transparent bg-red-500" />
         </Link>
       </motion.div>
 
