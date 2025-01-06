@@ -1,5 +1,8 @@
 import { allProducts } from "@/libs/utils";
+import Image from "next/image";
 import Link from "next/link";
+
+console.log(allProducts);
 
 function ListProducts() {
   return (
@@ -12,13 +15,14 @@ function ListProducts() {
           <Link
             href={`${product.id}`}
             key={product.id}
-            className="border border-red-500 rounded-lg w-80 h-[440px] group shadow-lg hover:shadow-2xl duration-300">
+            className="border border-black rounded-lg w-80 h-[440px] group shadow-lg hover:shadow-2xl duration-300">
             <div className="flex flex-col gap-2 p-4 w-full">
-              <div className="w-full h-80">
-                <img
+              <div className="w-full h-80 relative">
+                <Image
                   src={product.images[0]}
                   alt={product.name}
                   className="object-cover w-full h-full rounded-lg group-hover:scale-[1.03] transition-all duration-300"
+                  fill
                 />
               </div>
               <h3 className="font-semibold">{product.name}</h3>

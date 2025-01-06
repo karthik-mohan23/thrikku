@@ -3,15 +3,16 @@
 import { HTMLAttributes, useEffect, useState } from "react";
 
 import { cn } from "@/libs/utils";
+import Image, { StaticImageData } from "next/image";
 
 interface ImageProps extends HTMLAttributes<HTMLDivElement> {
-  item: string;
+  item: StaticImageData;
   index: number;
   activeItem: number;
 }
 
 interface ExpandableProps {
-  list?: string[];
+  list?: StaticImageData[];
   autoPlay?: boolean;
   className?: string;
 }
@@ -27,9 +28,10 @@ const List = ({ item, className, index, activeItem, ...props }: ImageProps) => {
         className
       )}
       {...props}>
-      <img
+      <Image
         src={item}
         alt="image"
+        fill
         className={cn("h-full w-full object-cover", {
           "blur-[2px]": index !== activeItem,
         })}
@@ -38,14 +40,8 @@ const List = ({ item, className, index, activeItem, ...props }: ImageProps) => {
   );
 };
 
-const items = [
-  "https://images.unsplash.com/photo-1541753236788-b0ac1fc5009d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3",
-  "https://images.unsplash.com/photo-1718027808460-7069cf0ca9ae?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3",
-  "https://images.unsplash.com/photo-1584968173934-bc0b588eb806?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3",
-];
-
 export default function Expandable({
-  list = items,
+  list,
   autoPlay = true,
   className,
 }: ExpandableProps) {
@@ -53,7 +49,7 @@ export default function Expandable({
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    if (!autoPlay) {
+    if (!autoPlay || !list?.length) {
       return;
     }
 
@@ -64,13 +60,13 @@ export default function Expandable({
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [autoPlay, list.length, isHovering]);
+  }, [autoPlay, list?.length, isHovering]);
 
   return (
     <div className={cn("flex h-96 w-full gap-1", className)}>
-      {list.map((item, index) => (
+      {list?.map((item, index) => (
         <List
-          key={item}
+          key={index}
           item={item}
           index={index}
           activeItem={activeItem}
