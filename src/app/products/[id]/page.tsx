@@ -38,7 +38,7 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
           </h1>
           <p className="text-xl md:text-2xl">₹ {currentProduct.price}</p>
           <Link
-            href="https://wa.me/919495850577"
+            href="https://wa.me/919778781981"
             target="_blank"
             className="max-w-72">
             <SwipeButton
