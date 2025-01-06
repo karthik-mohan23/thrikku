@@ -105,13 +105,14 @@ export default function ProductFeatures() {
             duration: 0.5,
           },
         }}
-        className="flex max-w-2xl flex-col items-center gap-4 md:gap-4 text-center">
+        className="flex max-w-2xl flex-col items-center gap-4 md:gap-8 text-center">
         <h1 className="text-4xl md:text-6xl px-2 md:px-0 font-black text-black">
           Wear Your Story. Shop Your Style!
         </h1>
-        <Balancer className="block text-lg text-neutral-500 max-w-md px-2">
-          Bold Prints for Every Mood.From graphic classics to trendy essentials,
-          we&apos;ve got your style sorted.
+        <Balancer className="block text-lg text-neutral-500  px-2">
+          Celebrate Your Style with Premium Prints for Every Occasion.
+          {/* Bold Prints for Every Mood.From graphic classics to trendy essentials,
+          we&apos;ve got your style sorted. */}
         </Balancer>
       </motion.header>
 
