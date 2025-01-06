@@ -2,15 +2,13 @@ import { allProducts } from "@/libs/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-console.log(allProducts);
-
 function ListProducts() {
   return (
     <section className="">
       <h1 className="py-5 md:py-10 font-semibold text-2xl text-center underline">
         Latest Arrivals
       </h1>
-      <div className="w-[90%] lg:w-full mx-auto flex flex-col md:flex-row flex-wrap lg:justify-center items-center gap-8 ">
+      <div className="w-[90%] lg:w-full mx-auto flex flex-col md:flex-row flex-wrap md:justify-center items-center gap-8 ">
         {allProducts.map((product) => (
           <Link
             href={`${product.id}`}
@@ -23,6 +21,7 @@ function ListProducts() {
                   alt={product.name}
                   className="object-cover w-full h-full rounded-lg group-hover:scale-[1.03] transition-all duration-300"
                   fill
+                  priority
                 />
               </div>
               <h3 className="font-semibold">{product.name}</h3>
