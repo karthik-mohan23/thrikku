@@ -24,7 +24,7 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
   return (
     <section className="max-w-5xl mx-auto w-[90%] pb-10 md:pb-14">
       <div className="pt-5 pb-10">
-        <BackButton to="/products/all" />
+        <BackButton to="/products" />
       </div>
       <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
         {/* image */}
@@ -36,7 +36,25 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
             {currentProduct.name}
           </h1>
-          <p className="text-xl md:text-2xl">₹ {currentProduct.price}</p>
+
+          <div className="flex flex-col gap-1">
+            <p>100% Cotton T-shirt</p>
+            <p>Export Quality Cotton</p>
+            <p>Soft and stretchable material</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <p>Available sizes : </p>
+            <p className="flex flex-wrap items-center gap-3 lg:gap-5">
+              {currentProduct.sizes.map((size) => (
+                <span
+                  key={size}
+                  className="rounded border border-gray-200 bg-orange-50 px-2 py-1 flex justify-center items-center font-semibold">
+                  {size}
+                </span>
+              ))}
+            </p>
+          </div>
+          <p className="text-2xl md:text-3xl">₹ {currentProduct.price}</p>
           <Link
             href="https://wa.me/919778781981"
             target="_blank"

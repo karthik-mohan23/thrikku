@@ -13,7 +13,7 @@ export function EmblaCarousel({ images }: { images: StaticImageData[] }) {
         {images.map((item, index) => (
           <div
             key={index}
-            className="embla__slide relative h-[460px] md:h-[550px]">
+            className="embla__slide relative h-[460px] md:h-[500px]">
             <Image
               src={item}
               alt="banner image"

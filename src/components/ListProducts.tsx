@@ -11,7 +11,7 @@ function ListProducts() {
       <div className="w-[90%] lg:w-full mx-auto flex flex-col md:flex-row flex-wrap md:justify-center items-center gap-8 ">
         {allProducts.map((product) => (
           <Link
-            href={`${product.id}`}
+            href={`/products/${product.id}`}
             key={product.id}
             className="border border-black rounded-lg w-80 h-[440px] group shadow-lg hover:shadow-2xl duration-300">
             <div className="flex flex-col gap-2 p-4 w-full">

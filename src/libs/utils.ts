@@ -15,6 +15,8 @@ import mobileBOneImg from "../../public/mobileBOne.jpg";
 import mobileBTwoImg from "../../public/mobileBTwo.jpg";
 import mobileBThreeImg from "../../public/mobileBThree.jpg";
 
+import comboOneImg from "../../public/comboOne.jpg";
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -22,14 +24,23 @@ export function cn(...inputs: ClassValue[]) {
 export const allProducts = [
   {
     id: 1,
-    images: [greenOneImg, greenTwoImg, greenThreeImg],
-    name: "Chakra Design",
-    price: 599,
+    images: [comboOneImg, greenOneImg, starFourImg],
+    name: "Combo Offer",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    price: 899,
   },
   {
     id: 2,
+    images: [greenOneImg, greenTwoImg, greenThreeImg],
+    name: "Chakra Design",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    price: 599,
+  },
+  {
+    id: 3,
     images: [starOneImg, starTwoImg, starFourImg],
     name: "Star Design",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     price: 599,
   },
 ];

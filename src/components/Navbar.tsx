@@ -5,15 +5,18 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <header className="bg-white text-black py-1">
+    <header className="bg-white text-black py-3">
       <nav className="w-[90%] max-w-6xl mx-auto flex items-center justify-between">
-        <Link href="/" className="relative max-w-20 w-12 h-12 lg:w-16 lg:h-20">
-          <Image
-            alt="thrikku logo"
-            src={"/brandLogo.webp"}
-            fill
-            className="object-contain w-full h-auto"
-          />
+        <Link href={"/"} className="flex gap-2">
+          <div className="relative max-w-20 w-8 h-8 lg:w-10 lg:h-10">
+            <Image
+              alt="thrikku logo"
+              src={"/brandLogo.webp"}
+              fill
+              className="object-contain w-full h-auto"
+            />
+          </div>
+          <h3 className="font-bold text-xl lg:text-2xl self-end">Thrikku</h3>
         </Link>
         <ul className="flex items-center gap-5 lg:gap-10">
           <li>
