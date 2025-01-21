@@ -48,7 +48,7 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
               {currentProduct.sizes.map((size) => (
                 <span
                   key={size}
-                  className="rounded border border-gray-200 bg-orange-50 px-2 py-1 flex justify-center items-center font-semibold">
+                  className="rounded border border-gray-200 bg-orange-50/60 px-2 py-1 flex justify-center items-center font-semibold">
                   {size}
                 </span>
               ))}

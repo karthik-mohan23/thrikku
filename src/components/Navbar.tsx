@@ -7,6 +7,7 @@ function Navbar() {
   return (
     <header className="bg-white text-black py-3">
       <nav className="w-[90%] max-w-6xl mx-auto flex items-center justify-between">
+        {/* <div className="flex items-center gap-20"> */}
         <Link href={"/"} className="flex gap-2">
           <div className="relative max-w-20 w-8 h-8 lg:w-10 lg:h-10">
             <Image
@@ -18,6 +19,10 @@ function Navbar() {
           </div>
           <h3 className="font-bold text-xl lg:text-2xl self-end">Thrikku</h3>
         </Link>
+        {/* <Link href={"/products"} className="self-end">
+            All products
+          </Link> */}
+        {/* </div> */}
         <ul className="flex items-center gap-5 lg:gap-10">
           <li>
             <Link
