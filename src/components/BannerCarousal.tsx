@@ -3,6 +3,7 @@ import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image, { StaticImageData } from "next/image";
+// import bannerOnePngImg from "../../public/bannerOne.png";
 
 export function EmblaCarousel({ images }: { images: StaticImageData[] }) {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
@@ -13,13 +14,12 @@ export function EmblaCarousel({ images }: { images: StaticImageData[] }) {
         {images.map((item, index) => (
           <div
             key={index}
-            className="embla__slide relative h-[460px] md:h-[500px]">
+            className="embla__slide w-full h-[400px] lg:h-[600px]">
             <Image
               src={item}
               alt="banner image"
-              fill
               className="object-cover w-full h-full"
-              priority
+              fill
             />
           </div>
         ))}

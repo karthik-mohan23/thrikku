@@ -53,4 +53,4 @@ export const mobileBanners = [
   mobileBOnePngImg,
   mobileBOnePngImg,
 ];
-export const desktopBanners = [bannerTwoPngImg, bannerOnePngImg];
+export const desktopBanners = [bannerOnePngImg];
