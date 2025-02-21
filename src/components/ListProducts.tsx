@@ -24,8 +24,23 @@ function ListProducts() {
                   priority
                 />
               </div>
-              <h3 className="font-semibold">{product.name}</h3>
-              <p>₹ {product.price}</p>
+              <h3 className="font-semibold text-lg">{product.name}</h3>
+              <div className="flex items-center gap-1">
+                <p
+                  className={`${
+                    product.discountedPrice ? "line-through opacity-80" : ""
+                  } `}>
+                  ₹{product.price}
+                </p>
+                {/* <p>
+                  ₹ <span className="line-through">{product.price}</span>
+                </p> */}
+                {product.discountedPrice && (
+                  <p className="font-medium text-lg">
+                    ₹{product.discountedPrice}
+                  </p>
+                )}
+              </div>
             </div>
           </Link>
         ))}

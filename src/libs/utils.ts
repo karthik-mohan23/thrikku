@@ -21,9 +21,10 @@ export const allProducts = [
   {
     id: 1,
     images: [comboOneImg, greenOneImg, starFourImg],
-    name: "Combo Offer",
+    name: "Special Combo Offer",
     sizes: ["S", "M", "L", "XL", "XXL"],
-    price: 899,
+    price: "1,199",
+    discountedPrice: 899,
   },
   {
     id: 2,
@@ -31,6 +32,7 @@ export const allProducts = [
     name: "Chakra Design",
     sizes: ["S", "M", "L", "XL", "XXL"],
     price: 599,
+    // discountedPrice: 899,
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ export const allProducts = [
     name: "Star Design",
     sizes: ["S", "M", "L", "XL", "XXL"],
     price: 599,
+    // discountedPrice: 899,
   },
 ];
 
