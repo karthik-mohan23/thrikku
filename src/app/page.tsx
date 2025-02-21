@@ -1,7 +1,8 @@
 import { EmblaCarousel } from "@/components/BannerCarousal";
 import ListProducts from "../components/ListProducts";
-// import { desktopBanners, mobileBanners } from "@/libs/utils";
 import { desktopBanners } from "@/libs/utils";
+
+console.log(desktopBanners, "desktopBanners");
 
 function Home() {
   return (

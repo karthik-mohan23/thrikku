@@ -1,12 +1,14 @@
 "use client";
+
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image, { StaticImageData } from "next/image";
-// import bannerOnePngImg from "../../public/bannerOne.png";
 
 export function EmblaCarousel({ images }: { images: StaticImageData[] }) {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+
+  console.log(images);
 
   return (
     <div className="embla" ref={emblaRef}>
