@@ -8,15 +8,8 @@ import starOneImg from "../../public/starOne.jpg";
 import starTwoImg from "../../public/starTwo.jpg";
 import starFourImg from "../../public/starFour.jpg";
 
-// import bannerOneImg from "../../public/bannerOne.jpg";
 import bannerOnePngImg from "../../public/bannerOne.png";
-// import bannerTwoImg from "../../public/bannerTwo.jpg";
 import bannerTwoPngImg from "../../public/bannerTwo.png";
-
-// import mobileBOnePngImg from "../../public/mobileBOne.png";
-// import mobileBOneImg from "../../public/mobileBOne.jpg";
-// import mobileBTwoImg from "../../public/mobileBTwo.jpg";
-// import mobileBThreeImg from "../../public/mobileBThree.jpg";
 
 import comboOneImg from "../../public/comboOne.jpg";
 
@@ -48,13 +41,4 @@ export const allProducts = [
   },
 ];
 
-// export const mobileBanners = [
-//   mobileBOnePngImg,
-//   mobileBOnePngImg,
-//   mobileBOnePngImg,
-// ];
-export const desktopBanners = [
-  bannerOnePngImg,
-  bannerTwoPngImg,
-  bannerOnePngImg,
-];
+export const desktopBanners = [bannerTwoPngImg, bannerOnePngImg];
