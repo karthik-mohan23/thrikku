@@ -24,14 +24,17 @@ function Navbar() {
           </Link> */}
         {/* </div> */}
         <ul className="flex items-center gap-5 lg:gap-10">
-          <li>
+          <li className="group">
             <Link
               href={"https://www.instagram.com/thrikku_?igsh=NmxqMXMwcXhzMnEz"}
               target="_blank">
-              <Instagram strokeWidth={1.5} />
+              <Instagram
+                strokeWidth={1.5}
+                className="group-hover:scale-110 duration-200 transition-all"
+              />
             </Link>
           </li>
-          <li>
+          <li className="group">
             <Link href="https://wa.me/919778781981" target="_blank">
               <Whatsapp />
             </Link>

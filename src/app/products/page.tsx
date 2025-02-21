@@ -25,7 +25,21 @@ function page() {
                 />
               </div>
               <h3 className="font-semibold">{product.name}</h3>
-              <p>₹ {product.price}</p>
+              <div className="flex items-center gap-1">
+                <p
+                  className={`${
+                    product.discountedPrice ? "line-through opacity-80" : ""
+                  } `}>
+                  ₹{product.price}
+                </p>
+
+                {product.discountedPrice && (
+                  <p className="font-medium text-lg">
+                    ₹{product.discountedPrice}
+                  </p>
+                )}
+              </div>
+              {/* <p>₹ {product.price}</p> */}
             </div>
           </Link>
         ))}

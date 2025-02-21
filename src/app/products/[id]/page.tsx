@@ -54,7 +54,23 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
               ))}
             </p>
           </div>
-          <p className="text-2xl md:text-3xl">₹ {currentProduct.price}</p>
+          <div className="flex items-center gap-1">
+            <p
+              className={`${
+                currentProduct.discountedPrice
+                  ? "line-through opacity-80"
+                  : "text-2xl md:text-3xl"
+              } `}>
+              ₹{currentProduct.price}
+            </p>
+
+            {currentProduct.discountedPrice && (
+              <p className="font-medium text-2xl md:text-3xl">
+                ₹{currentProduct.discountedPrice}
+              </p>
+            )}
+          </div>
+          {/* <p className="text-2xl md:text-3xl">₹ {currentProduct.price}</p> */}
           <Link
             href="https://wa.me/919778781981"
             target="_blank"

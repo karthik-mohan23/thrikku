@@ -1,5 +1,6 @@
 export const Whatsapp = (props: object) => (
   <svg
+    className="group-hover:scale-110 duration-200 transition-all"
     xmlns="http://www.w3.org/2000/svg"
     width="22"
     height="22"

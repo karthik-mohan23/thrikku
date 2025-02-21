@@ -28,13 +28,13 @@ function ListProducts() {
               <div className="flex items-center gap-1">
                 <p
                   className={`${
-                    product.discountedPrice ? "line-through opacity-80" : ""
+                    product.discountedPrice
+                      ? "line-through opacity-80"
+                      : "text-lg"
                   } `}>
                   ₹{product.price}
                 </p>
-                {/* <p>
-                  ₹ <span className="line-through">{product.price}</span>
-                </p> */}
+
                 {product.discountedPrice && (
                   <p className="font-medium text-lg">
                     ₹{product.discountedPrice}

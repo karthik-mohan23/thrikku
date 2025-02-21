@@ -8,8 +8,6 @@ import Image, { StaticImageData } from "next/image";
 export function EmblaCarousel({ images }: { images: StaticImageData[] }) {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
-  console.log(images);
-
   return (
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
